@@ -8,7 +8,6 @@ import java.text.SimpleDateFormat
 class NoteAdapter : Adapter<NoteViewHolder>() {
 
     private val list = mutableListOf<Note>()
-    private val formatter = SimpleDateFormat("dd.MM.yyyy hh:mm")
 
     fun addNote(note: Note) {
         list.add(note)
@@ -16,17 +15,12 @@ class NoteAdapter : Adapter<NoteViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(
-            R.layout.item_note, parent, false
-        )
-        return NoteViewHolder(view)
+        return NoteViewHolder.from(parent)
     }
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         val note = list[position]
-        holder.title.text = note.title
-        holder.text.text = note.text
-        holder.data.text = formatter.format(note.date)
+        holder.bind(note)
     }
 
     override fun getItemCount(): Int {
