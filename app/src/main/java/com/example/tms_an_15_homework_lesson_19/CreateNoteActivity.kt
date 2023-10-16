@@ -9,6 +9,7 @@ import androidx.appcompat.widget.AppCompatTextView
 import java.util.Date
 
 class CreateNoteActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_note)

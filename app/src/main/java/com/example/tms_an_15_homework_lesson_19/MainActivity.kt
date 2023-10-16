@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import java.util.Date
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

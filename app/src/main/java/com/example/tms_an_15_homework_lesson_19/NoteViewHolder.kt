@@ -8,9 +8,10 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import java.text.SimpleDateFormat
 
 class NoteViewHolder(view: View) : ViewHolder(view) {
-    val title = view.findViewById<AppCompatTextView>(R.id.title)
-    val text = view.findViewById<AppCompatTextView>(R.id.text)
-    val data = view.findViewById<AppCompatTextView>(R.id.data)
+
+    private val title = view.findViewById<AppCompatTextView>(R.id.title)
+    private val text = view.findViewById<AppCompatTextView>(R.id.text)
+    private val data = view.findViewById<AppCompatTextView>(R.id.data)
 
     private val formatter = SimpleDateFormat("dd.MM.yyyy hh:mm")
 
@@ -28,5 +29,4 @@ class NoteViewHolder(view: View) : ViewHolder(view) {
             return NoteViewHolder(view)
         }
     }
-
 }

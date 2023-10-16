@@ -19,8 +19,7 @@ class NoteAdapter : Adapter<NoteViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
-        val note = list[position]
-        holder.bind(note)
+        holder.bind(list[position])
     }
 
     override fun getItemCount(): Int {
